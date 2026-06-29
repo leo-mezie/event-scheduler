@@ -1,2 +1,2 @@
 # event-scheduler
-thus is an scheduling system developed with nodejs
+this is an scheduling system developed with nodejs
