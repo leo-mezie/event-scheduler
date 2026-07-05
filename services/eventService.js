@@ -11,7 +11,6 @@ const dataPath = path.join(__dirname, '../data/events.json');
 
 
 try {
-
     const readData = async () => {
     const data = await fs.readFile(dataPath, 'utf-8');
     return JSON.parse(data || '[]');
@@ -62,10 +61,12 @@ export const getEvents = async (req, res) => {
 }catch (error) {
     console.error('Error creating event:', error);
     res.status(500).json({ error: 'Internal Server Error' });
-}
-}
 
-// get event by id
+}
+  }
+
+
+  // get event by id
 const getEventById = async (req, res) => {
   try{
   const events = await readData();//read db data first
