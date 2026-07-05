@@ -12,7 +12,7 @@ export function validateEvent(data) {
   }
 
   //converts the date to a number and checks if it is a valid date 
-  const parsed = new Date(data.date);
+  const parsed = new Date(data.eventDate);
   if (isNaN(parsed.getTime())) {
     return { valid: false, error: "Date must be a valid date format (e.g. 2026-07-15T10:00:00Z)." };
   }

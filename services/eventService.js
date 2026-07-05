@@ -10,13 +10,14 @@ const __dirname = path.dirname(__filename);
 const dataPath = path.join(__dirname, '../data/events.json');
 
 
+ const readData = async () => {  
 try {
-    const readData = async () => {
     const data = await fs.readFile(dataPath, 'utf-8');
     return JSON.parse(data || '[]');
     }
-}catch(error){
+    catch(error){
     console.error('Error reading data:', error);
+}
 }
 
   const writeData = async (data) => {
