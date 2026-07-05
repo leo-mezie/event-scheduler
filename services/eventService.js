@@ -40,7 +40,7 @@ export const getEvents = async (req, res) => {
 // create a new event
 try{
 export const createEvent = async (req, res) => {
-  const { valid, message } = validateEvent(newEvent);
+  const { valid, message } = validateEvent(req.body);
   if (!valid) return res.status(400).json({ message });
   const events = await readData();
   const newEvent = {
@@ -57,7 +57,9 @@ export const createEvent = async (req, res) => {
   await writeData(events);
   res.status(201).json(newEvent);
 }
+
 }catch (error) {
     console.error('Error creating event:', error);
     res.status(500).json({ error: 'Internal Server Error' });
+
 }
