@@ -11,7 +11,7 @@ const dataPath = path.join(__dirname, '../data/events.json');
 
 
 try {
-    
+
     const readData = async () => {
     const data = await fs.readFile(dataPath, 'utf-8');
     return JSON.parse(data || '[]');
@@ -27,20 +27,23 @@ try {
 }
 
 // get all events
-try{
+
 export const getEvents = async (req, res) => {
+  try{
   const events = await readData();
   res.status(200).json(events);
-};
-}catch (error) {
+  }catch (error) {
     console.error('Error getting events:', error);
     res.status(500).json({ error: 'Internal Server Error' });
 }
+}
+
 
 // create a new event
-try{
-export const createEvent = async (req, res) => {
+
+  export const createEvent = async (req, res) => {
   const { valid, message } = validateEvent(newEvent);
+  try{
   if (!valid) return res.status(400).json({ message });
   const events = await readData();
   const newEvent = {
@@ -56,8 +59,25 @@ export const createEvent = async (req, res) => {
   events.push(newEvent);
   await writeData(events);
   res.status(201).json(newEvent);
-}
 }catch (error) {
     console.error('Error creating event:', error);
     res.status(500).json({ error: 'Internal Server Error' });
+}
+}
+
+// get event by id
+const getEventById = async (req, res) => {
+  try{
+  const events = await readData();//read db data first
+  //check if event exists in db
+  //by checking with the id passed in the request params
+  const event = events.find(event => event.id === req.params.id); 
+  if (!event) {
+    return res.status(404).json({ error: 'Event not found' }); // Return 404 if event not found
+  }
+  res.status(200).json(event);
+} catch (error) {
+  console.error('Error fetching event:', error);
+  res.status(500).json({ error: 'Internal Server Error' });
+}
 }
