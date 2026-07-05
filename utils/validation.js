@@ -2,13 +2,13 @@
 
 //checking to see if the title is missing or just empty space
 export function validateEvent(data) {
-  if (!data.title || typeof data.title !== "string" || data.title.trim() === "") {
-    return { valid: false, error: "Title is required and must be a non-empty string." };
+  if (!data.eventName || typeof data.eventName !== "string" || data.eventName.trim() === "") {
+    return { valid: false, error: "Event name is required and must be a non-empty string." };
   }
 
 //checking to see if the date field exists and is of the correct format
-  if (!data.date || typeof data.date !== "string") {
-    return { valid: false, error: "Date is required and must be a string." };
+  if (!data.eventDate || typeof data.eventDate !== "string") {
+    return { valid: false, error: "Event date is required " };
   }
 
   //converts the date to a number and checks if it is a valid date 
@@ -23,8 +23,8 @@ export function validateEvent(data) {
   }
 
   //checking the location field but optional, only runs if location is provided
-  if (data.location !== undefined && typeof data.location !== "string") {
-    return { valid: false, error: "Location must be a string." };
+  if (data.eventLocation !== undefined && typeof data.eventLocation !== "string") {
+    return { valid: false, error: "Event location must be a string." };
   }
 
   return { valid: true };
