@@ -100,3 +100,17 @@ export const deleteEvent = async (req, res, next) => {
     next(error);
   }
 };
+
+
+// deleteExpiredEvents function to remove events that have already occurred
+export const deleteExpiredEvents = async () => {
+  try {
+    const events = await readData();
+    const now = new Date();
+    const updatedEvents = events.filter(event => new Date(event.eventDate) >= now);
+    await writeData(updatedEvents);
+  } catch (error) {
+    console.error('Error deleting expired events:', error);
+  } 
+} 
+    

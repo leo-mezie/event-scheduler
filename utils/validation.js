@@ -1,5 +1,6 @@
 // validation.js — Validates event input data
 
+
 //checking to see if the title is missing or just empty space
 export function validateEvent(data) {
   if (!data.eventName || typeof data.eventName !== "string" || data.eventName.trim() === "") {
