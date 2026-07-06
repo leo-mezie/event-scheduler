@@ -63,3 +63,29 @@ export const createEvent = async (req, res) => {
     res.status(500).json({ error: 'Internal Server Error' });
 
 }
+
+// update an existing event
+export const updateEvent = async (req, res) => {
+  const { valid, message } = validateEvent(req.body);
+  if (!valid) return res.status(400).json({ message });
+
+  const events = await readData();
+  const eventIndex = events.findIndex((e) => e.id === req.params.id);
+
+  if (eventIndex === -1) {
+    return res.status(404).json({ message: 'Event not found' });
+  }
+
+  events[eventIndex] = {
+    ...events[eventIndex],
+    eventName: req.body.eventName,
+    eventDate: req.body.eventDate,
+    eventTime: req.body.eventTime,
+    eventDescription: req.body.eventDescription,
+    eventLocation: req.body.eventLocation,
+    updatedAt: new Date().toISOString()
+  };
+
+  await writeData(events);
+  res.status(200).json(events[eventIndex]);
+};
