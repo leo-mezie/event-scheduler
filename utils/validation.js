@@ -18,8 +18,8 @@ export function validateEvent(data) {
   }
 
   //checking the description field but optional, only runs if description is provided   
-  if (data.description !== undefined && typeof data.description !== "string") {
-    return { valid: false, error: "Description must be a string." };
+  if (data.eventDescription !== undefined && typeof data.eventDescription !== "string") {
+    return { valid: false, error: "Event description must be a string." };
   }
 
   //checking the location field but optional, only runs if location is provided

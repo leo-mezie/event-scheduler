@@ -83,3 +83,24 @@ const getEventById = async (req, res) => {
   res.status(500).json({ error: 'Internal Server Error' });
 }
 }
+
+
+// DELETE an event by ID
+// export async function deleteEvent(req, res) {
+//   const events = await readData();
+//   const filtered = events.filter(e => e.id !== req.params.id);
+
+//   await writeData(filtered);
+//   res.status(200).json({ message: 'Event deleted' });
+// }
+
+// DELETE expired events
+export async function deleteExpiredEvents(req, res) {
+  const events = await readData();
+  const now = new Date();
+
+  const filtered = events.filter(event => new Date(event.eventDate) > now);
+  await writeData(filtered);
+
+  res.status(200).json({ message: 'Expired events deleted' });
+}
