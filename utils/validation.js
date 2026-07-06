@@ -6,7 +6,7 @@ export function validateEvent(data) {
     return { valid: false, error: "Event name is required and must be a non-empty string." };
   }
 
-//checking to see if the date field exists and is of the correct format
+  //checking to see if the date field exists and is of the correct format
   if (!data.eventDate || typeof data.eventDate !== "string") {
     return { valid: false, error: "Event date is required " };
   }
