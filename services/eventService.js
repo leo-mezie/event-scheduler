@@ -73,7 +73,7 @@ const getEventById = async (req, res) => {
 }
 
 
-// delete expiered events
+// delete expired events
 export const deleteExpiredEvents = async (req, res) => {
   try {
     const events = await readData();
