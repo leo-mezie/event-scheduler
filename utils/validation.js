@@ -12,14 +12,14 @@ export function validateEvent(data) {
   }
 
   //converts the date to a number and checks if it is a valid date 
-  const parsed = new Date(data.date);
+  const parsed = new Date(data.eventDate);
   if (isNaN(parsed.getTime())) {
     return { valid: false, error: "Date must be a valid date format (e.g. 2026-07-15T10:00:00Z)." };
   }
 
   //checking the description field but optional, only runs if description is provided   
-  if (data.description !== undefined && typeof data.description !== "string") {
-    return { valid: false, error: "Description must be a string." };
+  if (data.eventDescription !== undefined && typeof data.eventDescription !== "string") {
+    return { valid: false, error: "Event description must be a string." };
   }
 
   //checking the location field but optional, only runs if location is provided
