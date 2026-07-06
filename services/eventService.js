@@ -16,16 +16,16 @@ const writeData = async (data) => {
   await fs.writeFile(dataPath, JSON.stringify(data, null, 2));
 };
 
-export const getEvents = async (req, res, next) => {
+export const getEvents = async (req, res) => {
   try {
     const events = await readData();
     res.status(200).json(events);
   } catch (error) {
-    next(error);
+    res.status(500).json({error: 'Internal server error' });
   }
 };
 
-export const getEvent = async (req, res, next) => {
+export const getEventById = async (req, res) => {
   try {
     const events = await readData();
     const event = events.find(e => e.id === req.params.id);
@@ -34,11 +34,11 @@ export const getEvent = async (req, res, next) => {
     }
     res.status(200).json(event);
   } catch (error) {
-    next(error);
+    res.status(500).json({error: 'Internal server error' })
   }
 };
 
-export const createEvent = async (req, res, next) => {
+export const createEvent = async (req, res) => {
   try {
     const { valid, error } = validateEvent(req.body);
     if (!valid) return res.status(400).json({ error });
@@ -57,7 +57,7 @@ export const createEvent = async (req, res, next) => {
     await writeData(events);
     res.status(201).json(newEvent);
   } catch (error) {
-    next(error);
+    res.status(500).json({error: 'Internal server error' });
   }
 };
 
