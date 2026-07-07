@@ -9,4 +9,5 @@ router.post('/', createEvent);
 router.put('/:id', updateEvent);
 router.delete('/expired', deleteExpiredEvents);
 router.delete('/:id', deleteEvent);
+
 export default router;
