@@ -50,8 +50,7 @@ export const createEvent = async (req, res) => {
       eventTime: req.body.eventTime,
       eventDescription: req.body.eventDescription,
       eventLocation: req.body.eventLocation,
-      createdAt: new Date().toISOString(),
-      updatedAt: new Date().toISOString()
+      createdAt: new Date().toISOString()
     };
     events.push(newEvent);
     await writeData(events);
@@ -103,14 +102,31 @@ export const deleteEvent = async (req, res, next) => {
 
 
 // deleteExpiredEvents function to remove events that have already occurred
-export const deleteExpiredEvents = async () => {
+export const deleteExpiredEvents = async (req, res) => {
   try {
     const events = await readData();
-    const now = new Date();
-    const updatedEvents = events.filter(event => new Date(event.eventDate) >= now);
+
+    // Normalize current date to start of today
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+
+    // Keep only events that are today or in the future
+    const updatedEvents = events.filter(event => {
+      const eventDate = new Date(event.eventDate);
+      return !isNaN(eventDate) && eventDate >= today;
+    });
+    // Write back the filtered list
     await writeData(updatedEvents);
+
+    const deletedCount = events.length - updatedEvents.length;
+
+    res.status(200).json({
+      message: `Deleted ${deletedCount} expired events`,
+      remainingCount: updatedEvents.length
+    });
   } catch (error) {
-    console.error('Error deleting expired events:', error);
-  } 
-} 
-    
+    res.status(500).json({ error: 'Internal server error' });
+  }
+};
+
+

@@ -1,82 +1,31 @@
 [
   {
-<<<<<<< HEAD
-    "id": "1783351483331",
-    "eventName": "Event Schedule",
-    "eventDate": "2026-07-20",
-    "eventDescription": "Testing our project endpoints",
-    "createdAt": "2026-07-06T15:24:43.331Z",
-    "updatedAt": "2026-07-06T15:24:43.331Z"
-  },
-  {
-    "id": "1783355833746",
-    "eventName": "Event Schedule",
-    "eventDate": "2026-07-20",
-    "eventDescription": "Testing our project endpoints",
-    "createdAt": "2026-07-06T16:37:13.746Z",
-    "updatedAt": "2026-07-06T16:37:13.746Z"
-  },
-  {
-    "id": "1783355956564",
-    "eventName": "Event Schedule",
-    "eventDate": "2026-07-20",
-    "eventDescription": "Testing our project endpoints",
-    "createdAt": "2026-07-06T16:39:16.564Z",
-    "updatedAt": "2026-07-06T16:39:16.564Z"
-  },
-  {
-    "id": "1783432664339",
-    "eventName": "Event Schedule Updated",
-    "eventDate": "2026-07-20",
-    "eventDescription": "Testing our project endpoints",
-    "createdAt": "2026-07-07T13:57:44.360Z",
-    "updatedAt": "2026-07-07T13:57:44.360Z"
-  },
-  {
-    "id": "1783433118255",
-    "eventName": "Event Schedule Updated",
-    "eventDate": "2026-07-20",
-    "eventDescription": "Testing our project endpoints",
-    "createdAt": "2026-07-07T14:05:18.255Z",
-    "updatedAt": "2026-07-07T14:05:18.255Z"
-=======
-<<<<<<< HEAD
-    "id": "1783416457895",
-    "eventName": "james",
-    "eventDate": "07-07-2026",
-    "eventTime": "10:23pm",
-    "eventDescription": "wedding",
-    "createdAt": "2026-07-07T09:27:37.895Z",
-    "updatedAt": "2026-07-07T09:27:37.895Z"
-  },
-  {
-    "id": "1783417484065",
-    "eventName": "john",
+    "id": "1783446365192",
+    "eventName": "jack",
     "eventDate": "06-07-2026",
-    "eventTime": "11:23pm",
-    "eventDescription": "marriage",
-    "createdAt": "2026-07-07T09:44:44.065Z",
-    "updatedAt": "2026-07-07T09:44:44.065Z"
-=======
-    "id": "1783414041957",
-    "eventName": "future",
-    "eventDate": "2028-08-20T09:00:00Z",
-    "eventTime": "09:00",
-    "eventDescription": "Launching v2",
-    "eventLocation": "Lagos HQ",
-    "createdAt": "2026-07-07T08:47:21.957Z",
-    "updatedAt": "2026-07-07T08:47:21.957Z"
+    "eventTime": "10:33am",
+    "eventDescription": "wedding",
+    "createdAt": "2026-07-07T17:46:05.192Z",
+    "updatedAt": "2026-07-07T18:09:28.156Z",
+    "eventLocation": "tomorrow"
   },
   {
-    "id": "1783414268730",
-    "eventName": "future tense",
-    "eventDate": "2028-08-20T09:00:00Z",
-    "eventTime": "09:00",
-    "eventDescription": "Launching v2",
-    "eventLocation": "Abuja HQ",
-    "createdAt": "2026-07-07T08:51:08.730Z",
-    "updatedAt": "2026-07-07T08:51:08.730Z"
->>>>>>> 191d7a0c8b6273be25a95b5163262d42259d848c
->>>>>>> 365c5e720a60887e9a1da46b119a9f619f2c3383
+    "id": "1783446440523",
+    "eventName": "john",
+    "eventDate": "09-07-2026",
+    "eventTime": "10:33pm",
+    "eventDescription": "wedding",
+    "createdAt": "2026-07-07T17:47:20.523Z",
+    "updatedAt": "2026-07-07T17:47:20.523Z"
+  },
+  {
+    "id": "1783446518593",
+    "eventName": "jude",
+    "eventDate": "06-07-2026",
+    "eventTime": "10:33am",
+    "eventDescription": "wedding",
+    "createdAt": "2026-07-07T17:48:38.593Z",
+    "updatedAt": "2026-07-07T18:08:33.469Z",
+    "eventLocation": "tomorrow"
   }
 ]
