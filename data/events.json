@@ -1,0 +1,42 @@
+[
+  {
+    "id": "1783351483331",
+    "eventName": "Event Schedule",
+    "eventDate": "2026-07-20",
+    "eventDescription": "Testing our project endpoints",
+    "createdAt": "2026-07-06T15:24:43.331Z",
+    "updatedAt": "2026-07-06T15:24:43.331Z"
+  },
+  {
+    "id": "1783355833746",
+    "eventName": "Event Schedule",
+    "eventDate": "2026-07-20",
+    "eventDescription": "Testing our project endpoints",
+    "createdAt": "2026-07-06T16:37:13.746Z",
+    "updatedAt": "2026-07-06T16:37:13.746Z"
+  },
+  {
+    "id": "1783355956564",
+    "eventName": "Event Schedule",
+    "eventDate": "2026-07-20",
+    "eventDescription": "Testing our project endpoints",
+    "createdAt": "2026-07-06T16:39:16.564Z",
+    "updatedAt": "2026-07-06T16:39:16.564Z"
+  },
+  {
+    "id": "1783432664339",
+    "eventName": "Event Schedule Updated",
+    "eventDate": "2026-07-20",
+    "eventDescription": "Testing our project endpoints",
+    "createdAt": "2026-07-07T13:57:44.360Z",
+    "updatedAt": "2026-07-07T13:57:44.360Z"
+  },
+  {
+    "id": "1783433118255",
+    "eventName": "Event Schedule Updated",
+    "eventDate": "2026-07-20",
+    "eventDescription": "Testing our project endpoints",
+    "createdAt": "2026-07-07T14:05:18.255Z",
+    "updatedAt": "2026-07-07T14:05:18.255Z"
+  }
+]
