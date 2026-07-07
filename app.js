@@ -5,7 +5,10 @@ import eventsRouter from './routes/events.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+<<<<<<< HEAD
 
+=======
+>>>>>>> 365c5e720a60887e9a1da46b119a9f619f2c3383
 const app = express();
 const PORT = process.env.PORT || 3000;
 

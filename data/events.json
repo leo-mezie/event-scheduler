@@ -1,5 +1,6 @@
 [
   {
+<<<<<<< HEAD
     "id": "1783351483331",
     "eventName": "Event Schedule",
     "eventDate": "2026-07-20",
@@ -38,5 +39,44 @@
     "eventDescription": "Testing our project endpoints",
     "createdAt": "2026-07-07T14:05:18.255Z",
     "updatedAt": "2026-07-07T14:05:18.255Z"
+=======
+<<<<<<< HEAD
+    "id": "1783416457895",
+    "eventName": "james",
+    "eventDate": "07-07-2026",
+    "eventTime": "10:23pm",
+    "eventDescription": "wedding",
+    "createdAt": "2026-07-07T09:27:37.895Z",
+    "updatedAt": "2026-07-07T09:27:37.895Z"
+  },
+  {
+    "id": "1783417484065",
+    "eventName": "john",
+    "eventDate": "06-07-2026",
+    "eventTime": "11:23pm",
+    "eventDescription": "marriage",
+    "createdAt": "2026-07-07T09:44:44.065Z",
+    "updatedAt": "2026-07-07T09:44:44.065Z"
+=======
+    "id": "1783414041957",
+    "eventName": "future",
+    "eventDate": "2028-08-20T09:00:00Z",
+    "eventTime": "09:00",
+    "eventDescription": "Launching v2",
+    "eventLocation": "Lagos HQ",
+    "createdAt": "2026-07-07T08:47:21.957Z",
+    "updatedAt": "2026-07-07T08:47:21.957Z"
+  },
+  {
+    "id": "1783414268730",
+    "eventName": "future tense",
+    "eventDate": "2028-08-20T09:00:00Z",
+    "eventTime": "09:00",
+    "eventDescription": "Launching v2",
+    "eventLocation": "Abuja HQ",
+    "createdAt": "2026-07-07T08:51:08.730Z",
+    "updatedAt": "2026-07-07T08:51:08.730Z"
+>>>>>>> 191d7a0c8b6273be25a95b5163262d42259d848c
+>>>>>>> 365c5e720a60887e9a1da46b119a9f619f2c3383
   }
 ]
