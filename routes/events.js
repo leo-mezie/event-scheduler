@@ -8,7 +8,7 @@ router.get('/', getEvents);
 router.get('/:id', getEventById);
 router.post('/', createEvent);
 router.put('/:id', updateEvent);
-router.delete('/expired', deleteExpiredEvents);
 router.delete('/:id', deleteEvent);
+router.delete('/expired', deleteExpiredEvents);
 
 export default router;
