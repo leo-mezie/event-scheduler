@@ -50,7 +50,8 @@ export const createEvent = async (req, res) => {
       eventTime: req.body.eventTime,
       eventDescription: req.body.eventDescription,
       eventLocation: req.body.eventLocation,
-      createdAt: new Date().toISOString()
+      createdAt: new Date().toISOString(),
+      updatedAt: new Date().toISOString()
     };
     events.push(newEvent);
     await writeData(events);
